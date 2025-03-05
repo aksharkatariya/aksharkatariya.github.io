@@ -1,6 +1,5 @@
 # All About Data
 
-# Akshar Katariya
 
 Welcome to my personal website! I am a **Master of Public Policy** student at the **University of Chicago** with a Certificate in Data Science. My work focuses on **impact evaluation, data analysis, and policy research**.
 
@@ -9,7 +8,7 @@ Welcome to my personal website! I am a **Master of Public Policy** student at th
 ## 📚 Education
 
 - **University of Chicago, IL** (Graduation: May 2025)  
-  - Master of Public Policy | Certificate in Data Science | International House Fellow ’25  
+  - Master of Public Policy, Certificate in Data Science, International House Fellow ’25  
   - Coursework: ESG & Impact Investing, Program Evaluation, Microeconomics, Data Visualization  
 
 - **Ashoka University, India** (Graduation: May 2023)  
@@ -59,9 +58,9 @@ Welcome to my personal website! I am a **Master of Public Policy** student at th
 
 ## 🔧 Skills & Awards  
 
-- **Programming:** R (ggplot, shiny, base) | Python | STATA | SQL | MS Excel | QGIS | Ruby  
-- **Languages:** English (Professional) | Hindi (Native) | Marathi (Native)  
-- **Awards:** Essay Contest Winner (Berkeley Economic Review) | Harris Merit Scholar  
+- **Programming:** R (ggplot, shiny, base),  Python, STATA, SQL, MS Excel, QGIS, Ruby  
+- **Languages:** English (Professional), Hindi (Native), Marathi (Native)  
+- **Awards:** Essay Contest Winner (Berkeley Economic Review), Harris Merit Scholar  
 
 ---
 
