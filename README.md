@@ -8,28 +8,60 @@ Welcome to my personal website! I am a **Master of Public Policy** student at th
 Below are some selected projects from my data portfolio:
 
 ### Factorial Newsletter
-**Description:** Launched a data narratives newsletter with 300+ subscribers featuring data-driven articles on topics such as sports analytics, impact investing, and sentiment analysis.  
+**Description:** Launched a data narratives newsletter with 300+ subscribers to enhance data  
+literacy in India through compelling visual narratives. Published 20+ data-driven articles on  
+topics like sports analytics, impact investing, and sentiment analysis using Python and R.    
 **Link:** [Visit Newsletter](https://aksharkatariya.substack.com)
+**Highlighted work:**  
+[Analysis of Social Experiment of politeness (self-collected data)] (https://aksharkatariya.substack.com/p/hows-the-water)  
+[Sentiment Analysis of Hamilton]  (https://aksharkatariya.substack.com/p/hamiltongpt-exploring-the-musical)  
+[Data Analysis of Shark Tank Investments]  (https://aksharkatariya.substack.com/p/shark-hark-investments-in-shark-tank)
 
 ### Reading Beyond the (Radcliffe) Line: Sentiment Analysis & NER on Partition-Era Books
-**Description:** Employed sentiment analysis and Named Entity Recognition (NER) in R to explore themes and rhetoric in key texts about the Partition.  
+**Description:** This project used sentiment analysis and Named Entity Recognition (NER) in R to  
+explore evidence of syncretism and related rhetoric in five well-known books that provide a  
+narrative account of the Partition. The goal was to analyze the sentiment and identify key  
+entities related to the partition's themes and discourse.  
 **Link:** [View Project on GitHub](https://github.com/aksharkatariya/Partition-Project)
 
 ### Philanthropy and Responsibilism in the United States
-**Description:** Conducted a survey and analysis using Qualtrics & R to examine U.S. philanthropic behaviors and donation patterns.  
+**Description:** This project was funded in a pitch contest hosted by Professor Thomas Talhelm at  
+Booth School of Business. This gave us an opportunity to design our own survey of more than  
+50 questions which was completed by 180 individuals in the United States. This project explored  
+giving patterns in the U.S., analyzing factors influencing donations, preferences for structured  
+vs. informal giving, and donor anxieties. Findings provided insights into philanthropic behavior  
+and the motivations driving charitable contributions. We used Qualtrics & R to collect and  
+analyze data.   
 **Links:** [View Slide Deck](https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing) | [View Code](https://github.com/aksharkatariya/donations-philanthropies-analysis)
 
 ### What in the F-gases?
-**Description:** Created interactive visualizations using Altair in Python to analyze fluorinated gas emissions trends across countries and industries.  
+**Description:** This project utilized Altair in python to create interactive visualizations exploring  
+fluorinated gas (F-gases) emissions across countries, development statuses, and industries.  
+Key insights included identifying the top 10 emitters, analyzing per capita emissions trends, and  
+highlighting the role of retail refrigeration in rising emissions. The visual narratives effectively  
+communicated the disparity in emissions and the need for targeted mitigation policies using  
+relevant graphs & color themes.    
 **Links:** [View Project](https://uchicago-mscapp-projects.github.io/projects/what-in-the-f-gases/) | [View Code](https://github.com/aksharkatariya/static_project)
 
+### US Energy Sources Interactive Dashboard
+**Description:** Explore insights on US Energy trends segmented by each state and read about the State's energy transition goals, if any. 
+**Link:** [US Energy Website](https://us-energy-akshar.netlify.app)
+
 ### Materiality Assessment of APA Corp. (2024)
-**Description:** Conducted a qualitative and quantitative ESG analysis of APA Corp. using R, benchmarking its performance against competitors.  
+**Description:** In this project, APA Corp., a hydrocarbon exploration company was analyzed  
+qualitatively and benchmarked against competitors quantitatively on ESG themes. This project  
+was supervised by John Oxtoby (Ariel Investments) & Neolle Liang (Builders Vision). R  
+programming was used to conduct data analysis. 
 **Link:** [View Report](https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing)
 
 ### HabitByBit: SMS-based Habit Tracking App
-**Description:** Developed an SMS-based habit tracker with Ruby on Rails and D3.js, enabling users to easily track their daily routines.  
-**Links:** [Visit App](https://habitbybit.onrender.com) | [View Code](https://github.com/aksharkatariya/habit_by_bit)
+**Description:** Using Ruby on Rails and D3.js, I developed an SMS-based habit tracker  
+designed for ease of use and seamless customization. The application enables users to  
+self-report habits via text messages, offering a simple yet effective way to track progress.
+**Links:**  
+- [Video Walkthrough](https://habitbybit.onrender.com)  
+- [Website](https://habitbybit.onrender.com)  
+- [Code](https://github.com/aksharkatariya/habit_by_bit)
 
 ---
 
