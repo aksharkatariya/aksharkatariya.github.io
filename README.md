@@ -3,6 +3,86 @@
 
 Welcome to my personal website! I am a **Master of Public Policy** student at the **University of Chicago** with a Certificate in Data Science. My work focuses on **impact evaluation, data analysis, and policy research**.
 
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <h2>Selected Portfolio Projects</h2>
+  <div class="portfolio-grid">
+
+    <!-- Factorial Newsletter -->
+    <article class="portfolio-item">
+      <h3>Factorial Newsletter</h3>
+      <p>
+        Launched a data narratives newsletter with 300+ subscribers featuring projects like the Social Experiment of politeness, Hamilton sentiment analysis, and Shark Tank investments.
+      </p>
+      <p>
+        <a href="https://aksharkatariya.substack.com">Visit Newsletter</a>
+      </p>
+    </article>
+
+    <!-- Reading Beyond the (Radcliffe) line -->
+    <article class="portfolio-item">
+      <h3>Reading Beyond the (Radcliffe) line</h3>
+      <p>
+        Utilized sentiment analysis and Named Entity Recognition (NER) in R to explore evidence of syncretism in Partition-era literature.
+      </p>
+      <p>
+        <a href="https://github.com/aksharkatariya/Partition-Project">View Code</a>
+      </p>
+    </article>
+
+    <!-- Philanthropy and Responsibilism -->
+    <article class="portfolio-item">
+      <h3>Philanthropy and Responsibilism in the United States</h3>
+      <p>
+        Explored U.S. giving patterns using a custom survey (50+ questions, 180 respondents) with Qualtrics & R, revealing donor behaviors and preferences.
+      </p>
+      <p>
+        <a href="https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing">Slide Deck</a>
+        <span> | </span>
+        <a href="https://github.com/aksharkatariya/donations-philanthropies-analysis">View Code</a>
+      </p>
+    </article>
+
+    <!-- What in the F-gases? -->
+    <article class="portfolio-item">
+      <h3>What in the F-gases?</h3>
+      <p>
+        Developed interactive visualizations with Altair in Python to analyze F-gases emissions trends across countries and industries.
+      </p>
+      <p>
+        <a href="https://uchicago-mscapp-projects.github.io/projects/what-in-the-f-gases/">View Project</a>
+        <span> | </span>
+        <a href="https://github.com/aksharkatariya/static_project">View Code</a>
+      </p>
+    </article>
+
+    <!-- Materiality Assessment of APA Corp. -->
+    <article class="portfolio-item">
+      <h3>Materiality Assessment of APA Corp. (2024)</h3>
+      <p>
+        Conducted a qualitative and quantitative ESG analysis of APA Corp. using R, benchmarking its performance against competitors.
+      </p>
+      <p>
+        <a href="https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing">View Report</a>
+      </p>
+    </article>
+
+    <!-- HabitByBit App -->
+    <article class="portfolio-item">
+      <h3>HabitByBit: SMS-based Habit Tracking App</h3>
+      <p>
+        Built an SMS-based habit tracker using Ruby on Rails and D3.js, enabling users to easily track their daily routines.
+      </p>
+      <p>
+        <a href="https://habitbybit.onrender.com">Visit App</a>
+        <span> | </span>
+        <a href="https://github.com/aksharkatariya/habit_by_bit">View Code</a>
+      </p>
+    </article>
+
+  </div>
+</section>
+
 ---
 
 ## 📚 Education
