@@ -12,17 +12,23 @@ Below are some selected projects from my data portfolio:
 **Link:** [Visit Newsletter](https://aksharkatariya.substack.com)
 
 **Highlighted work:**  
+[Artistry of the Windy City: Chicago Mural Data Analysis](https://aksharkatariya.substack.com/p/artistry-of-the-windy-city)
 [Analysis of Social Experiment of politeness (self-collected data)](https://aksharkatariya.substack.com/p/hows-the-water)  
 [Sentiment Analysis of Hamilton](https://aksharkatariya.substack.com/p/hamiltongpt-exploring-the-musical)  
 [Data Analysis of Shark Tank Investments](https://aksharkatariya.substack.com/p/shark-hark-investments-in-shark-tank)
 
-### Reading Beyond the (Radcliffe) Line: Sentiment Analysis & NER on Partition-Era Books
-**Description:** This project used sentiment analysis and Named Entity Recognition (NER) in R to explore evidence of syncretism and related rhetoric in five well-known books that provide a narrative account of the Partition. The goal was to analyze the sentiment and identify key entities related to the partition's themes and discourse.  
-**Link:** [View Project on GitHub](https://github.com/aksharkatariya/Partition-Project)
+
+### Transit and Food Availability in Ashburn, Chicago
+**Description:** This market report analyzes Ashburn, Chicago's accessibility to essential food services, primarily grocery stores. It employs GIS mapping, examines public transit and bicycle infrastructure, identifies service gaps, and offers recommendations to improve food access and transportation equity within the community.   
+**Links:** [View Report](https://drive.google.com/file/d/1gOGuVAa963Hq6NIvC5WqqLx9csi-Rvb7/view?usp=sharing)
 
 ### Philanthropy and Responsibilism in the United States
 **Description:** This project was funded in a pitch contest hosted by Professor Thomas Talhelm at Booth School of Business. This gave us an opportunity to design our own survey of more than 50 questions which was completed by 180 individuals in the United States. This project explored giving patterns in the U.S., analyzing factors influencing donations, preferences for structured vs. informal giving, and donor anxieties. Findings provided insights into philanthropic behavior and the motivations driving charitable contributions. We used Qualtrics & R to collect and analyze data.   
 **Links:** [View Slide Deck](https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing) | [View Code](https://github.com/aksharkatariya/donations-philanthropies-analysis)
+
+### Materiality Assessment of APA Corp. (2024)
+**Description:** In this project, APA Corp., a hydrocarbon exploration company was analyzed qualitatively and benchmarked against competitors quantitatively on ESG themes. This project was supervised by John Oxtoby (Ariel Investments) & Neolle Liang (Builders Vision). R programming was used to conduct data analysis. 
+**Link:** [View Report](https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing)
 
 ### What in the F-gases?
 **Description:** This project utilized Altair in python to create interactive visualizations exploring fluorinated gas (F-gases) emissions across countries, development statuses, and industries. Key insights included identifying the top 10 emitters, analyzing per capita emissions trends, and highlighting the role of retail refrigeration in rising emissions. The visual narratives effectively communicated the disparity in emissions and the need for targeted mitigation policies using relevant graphs & color themes.    
@@ -32,9 +38,9 @@ Below are some selected projects from my data portfolio:
 **Description:** Explore insights on US Energy trends segmented by each state and read about the State's energy transition goals, if any. 
 **Link:** [US Energy Website](https://us-energy-akshar.netlify.app)
 
-### Materiality Assessment of APA Corp. (2024)
-**Description:** In this project, APA Corp., a hydrocarbon exploration company was analyzed qualitatively and benchmarked against competitors quantitatively on ESG themes. This project was supervised by John Oxtoby (Ariel Investments) & Neolle Liang (Builders Vision). R programming was used to conduct data analysis. 
-**Link:** [View Report](https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing)
+### Reading Beyond the (Radcliffe) Line: Sentiment Analysis & NER on Partition-Era Books
+**Description:** This project used sentiment analysis and Named Entity Recognition (NER) in R to explore evidence of syncretism and related rhetoric in five well-known books that provide a narrative account of the Partition. The goal was to analyze the sentiment and identify key entities related to the partition's themes and discourse.  
+**Link:** [View Project on GitHub](https://github.com/aksharkatariya/Partition-Project)
 
 ### HabitByBit: SMS-based Habit Tracking App
 **Description:** Using Ruby on Rails and D3.js, I developed an SMS-based habit tracker designed for ease of use and seamless customization. The application enables users to self-report habits via text messages, offering a simple yet effective way to track progress.
