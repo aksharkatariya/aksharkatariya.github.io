@@ -20,7 +20,7 @@ Below are some selected projects from my data portfolio:
 
 ### Transit and Food Availability in Ashburn, Chicago
 **Description:** This market report analyzes Ashburn, Chicago's accessibility to essential food services, primarily grocery stores. It employs GIS mapping, examines public transit and bicycle infrastructure, identifies service gaps, and offers recommendations to improve food access and transportation equity within the community.   
-**Links:** [View Report](https://drive.google.com/file/d/1gOGuVAa963Hq6NIvC5WqqLx9csi-Rvb7/view?usp=sharing)
+**Link:** [View Report](https://drive.google.com/file/d/1gOGuVAa963Hq6NIvC5WqqLx9csi-Rvb7/view?usp=sharing)
 
 ### Philanthropy and Responsibilism in the United States
 **Description:** This project was funded in a pitch contest hosted by Professor Thomas Talhelm at Booth School of Business. This gave us an opportunity to design our own survey of more than 50 questions which was completed by 180 individuals in the United States. This project explored giving patterns in the U.S., analyzing factors influencing donations, preferences for structured vs. informal giving, and donor anxieties. Findings provided insights into philanthropic behavior and the motivations driving charitable contributions. We used Qualtrics & R to collect and analyze data.   
