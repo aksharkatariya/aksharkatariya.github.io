@@ -35,7 +35,7 @@ Below are some selected projects from my data portfolio:
 **Links:** [View Project](https://uchicago-mscapp-projects.github.io/projects/what-in-the-f-gases/) | [View Code](https://github.com/aksharkatariya/static_project)
 
 ### US Energy Sources Interactive Dashboard
-**Description:** Explore insights on US Energy trends segmented by each state and read about the State's energy transition goals, if any. 
+**Description:** Explore insights on US Energy trends segmented by each state and read about the State's energy transition goals, if any.
 **Link:** [US Energy Website](https://us-energy-akshar.netlify.app)
 
 ### Reading Beyond the (Radcliffe) Line: Sentiment Analysis & NER on Partition-Era Books
