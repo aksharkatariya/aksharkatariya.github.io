@@ -27,7 +27,7 @@ Below are some selected projects from my data portfolio:
 **Links:** [View Slide Deck](https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing) | [View Code](https://github.com/aksharkatariya/donations-philanthropies-analysis)
 
 ### Materiality Assessment of APA Corp. (2024)
-**Description:** In this project, APA Corp., a hydrocarbon exploration company was analyzed qualitatively and benchmarked against competitors quantitatively on ESG themes. This project was supervised by John Oxtoby (Ariel Investments) & Neolle Liang (Builders Vision). R programming was used to conduct data analysis. 
+**Description:** In this project, APA Corp., a hydrocarbon exploration company was analyzed qualitatively and benchmarked against competitors quantitatively on ESG themes. This project was supervised by John Oxtoby (Ariel Investments) & Neolle Liang (Builders Vision). R programming was used to conduct data analysis.
 **Link:** [View Report](https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing)
 
 ### What in the F-gases?
