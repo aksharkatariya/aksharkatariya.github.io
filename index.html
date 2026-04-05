@@ -1,1 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshar Katariya — Data for Social Good</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4EEE4;
+      --bg-muted: #EBE3D5;
+      --ink: #1A1714;
+      --ink-muted: #7A7268;
+      --accent: #B94A22;
+      --rule: #D4C9B8;
+      --tag-bg: #E5DDD0;
+    }
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      padding: 4rem 0 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .masthead-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .masthead h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(3.2rem, 8vw, 5.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.4rem;
+    }
+
+    .masthead h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .masthead-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      font-style: italic;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      gap: 2rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    nav a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 3rem 0 1.5rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-header .rule-line {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0 0 2rem;
+    }
+
+    .filter-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid var(--rule);
+      background: transparent;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 2px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    /* ── PROJECT LIST ── */
+    .project-list {
+      list-style: none;
+    }
+
+    .project-item {
+      border-top: 1px solid var(--rule);
+      padding: 2rem 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-item.hidden {
+      display: none;
+    }
+
+    .project-item:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .project-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.55rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project-title:hover { color: var(--accent); }
+
+    .project-year {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      background: var(--tag-bg);
+      color: var(--ink-muted);
+      border-radius: 2px;
+    }
+
+    .project-desc {
+      font-size: 0.975rem;
+      color: var(--ink);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    .project-link {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .project-link:hover { border-bottom-color: var(--accent); }
+
+    .project-link::after { content: ' ↗'; }
+
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      border-top: 1px solid var(--rule);
+      padding: 1.6rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem 2rem;
+      align-items: start;
+    }
+
+    .exp-item:last-child { border-bottom: 1px solid var(--rule); }
+
+    .exp-org {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .exp-period {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--ink-muted);
+      text-align: right;
+      padding-top: 0.25rem;
+    }
+
+    .exp-role {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      grid-column: 1;
+    }
+
+    .exp-desc {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      grid-column: 1;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item {
+      border-top: 1px solid var(--rule);
+      padding: 1.4rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.3rem 2rem;
+    }
+
+    .edu-item:last-child { border-bottom: 1px solid var(--rule); }
+
+    .edu-school {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .edu-period {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--ink-muted);
+      text-align: right;
+      padding-top: 0.2rem;
+    }
+
+    .edu-degree {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      grid-column: 1;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 0 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid var(--rule);
+      margin-top: 3rem;
+    }
+
+    .footer-left h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .footer-links a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-right {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--ink-muted);
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    /* ── SKILLS ROW ── */
+    .skills-row {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+    }
+
+    .skill-tag::after { content: '·'; margin-left: 0.5rem; }
+    .skill-tag:last-child::after { content: ''; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 520px) {
+      .exp-item, .edu-item { grid-template-columns: 1fr; }
+      .exp-period, .edu-period { text-align: left; grid-row: 1; }
+      footer { flex-direction: column; gap: 2rem; align-items: flex-start; }
+    }
+
+    /* ── FADE IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .masthead, nav, .project-item, .exp-item, .edu-item {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .project-item:nth-child(1)  { animation-delay: 0.05s; }
+    .project-item:nth-child(2)  { animation-delay: 0.10s; }
+    .project-item:nth-child(3)  { animation-delay: 0.15s; }
+    .project-item:nth-child(4)  { animation-delay: 0.20s; }
+    .project-item:nth-child(5)  { animation-delay: 0.25s; }
+    .project-item:nth-child(6)  { animation-delay: 0.30s; }
+    .project-item:nth-child(7)  { animation-delay: 0.35s; }
+    .project-item:nth-child(8)  { animation-delay: 0.40s; }
+    .project-item:nth-child(9)  { animation-delay: 0.45s; }
+    .project-item:nth-child(10) { animation-delay: 0.50s; }
+    .project-item:nth-child(11) { animation-delay: 0.55s; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <p class="masthead-meta">MPP · Data Science · University of Chicago</p>
+    <h1>Akshar<br><em>Katariya</em></h1>
+    <p class="masthead-desc">I use data for social good — as a policy researcher, civic technologist, and data journalist working at the intersection of evidence and equity.</p>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="section-header">
+      <h2>Selected Work</h2>
+      <div class="rule-line"></div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="civic-tech">Civic Tech</button>
+      <button class="filter-btn" data-filter="data-viz">Data Viz</button>
+      <button class="filter-btn" data-filter="policy">Policy</button>
+      <button class="filter-btn" data-filter="nlp">NLP / Text</button>
+    </div>
+
+    <ul class="project-list">
+
+      <li class="project-item" data-tags="civic-tech nlp">
+        <div class="project-top">
+          <a class="project-title" href="https://t.me/farmfinance_bot" target="_blank">Khitaab</a>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Civic Tech</span>
+          <span class="tag">NLP</span>
+          <span class="tag">India</span>
+        </div>
+        <p class="project-desc">A WhatsApp and SMS chatbot that turns a farmer's spoken or typed transactions — in any language — into a clean, bank-ready financial record. Smallholder farmers in India lack formal credit access because they can't maintain structured books; banks can't assess repayability, so they fall back on informal moneylenders charging ~25% interest. Khitaab meets farmers where they already are, with no new app or learning curve required.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://t.me/farmfinance_bot" target="_blank">Chatbot</a>
+          <a class="project-link" href="https://drive.google.com/file/d/1hLonNY7NS3-krtFU9zuOVvkBdd7H9-ZX/view?usp=share_link" target="_blank">Elevator Pitch</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="data-viz">
+        <div class="project-top">
+          <a class="project-title" href="https://hexmapindia.streamlit.app/" target="_blank">HexMap India</a>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Cartography</span>
+          <span class="tag">India</span>
+        </div>
+        <p class="project-desc">Hexagonal tile maps are a staple of Western data journalism — but nobody had built one for India. I designed a full set of hex maps for Indian states and built a website around them, making the format accessible for journalists, researchers, and anyone who wants to visualize Indian data differently. A small thing that fills a real gap.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://hexmapindia.streamlit.app/" target="_blank">Website</a>
+          <a class="project-link" href="https://www.instagram.com/reel/DQscb45EaNM/" target="_blank">The Problem</a>
+          <a class="project-link" href="https://www.instagram.com/reel/DRZ6BwAkWP0/" target="_blank">How I Built It</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="data-viz policy">
+        <div class="project-top">
+          <a class="project-title" href="https://climatevizproject.netlify.app" target="_blank">Climate Visualization Challenge</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Climate</span>
+        </div>
+        <p class="project-desc">Temperature anomalies are hard to make visceral. This project combines 3D plots, SVG graphics, and audio to make complex climate trends accessible and emotionally legible for diverse audiences — moving beyond static charts into something closer to experience.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://climatevizproject.netlify.app" target="_blank">Project Website</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="data-viz policy">
+        <div class="project-top">
+          <a class="project-title" href="https://uchicago-mscapp-projects.github.io/projects/what-in-the-f-gases/" target="_blank">What in the F-gases?</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Policy</span>
+          <span class="tag">Climate</span>
+        </div>
+        <p class="project-desc">Interactive Altair visualizations exposing the global disparity in fluorinated gas emissions — by country, development status, and industry. Key findings: the top 10 emitters dominate, per capita trends diverge sharply, and retail refrigeration is a quietly rising culprit. Visual narratives built to inform targeted mitigation policy.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://uchicago-mscapp-projects.github.io/projects/what-in-the-f-gases/" target="_blank">Project</a>
+          <a class="project-link" href="https://github.com/aksharkatariya/static_project" target="_blank">Code</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="policy civic-tech">
+        <div class="project-top">
+          <a class="project-title" href="https://drive.google.com/file/d/1gOGuVAa963Hq6NIvC5WqqLx9csi-Rvb7/view?usp=sharing" target="_blank">Transit & Food Access in Ashburn, Chicago</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Policy</span>
+          <span class="tag">GIS</span>
+          <span class="tag">Civic Tech</span>
+          <span class="tag">Chicago</span>
+        </div>
+        <p class="project-desc">A GIS-based market report on Ashburn, a Chicago neighborhood that sits at the edge of both a grocery desert and a transit gap. The report maps food service accessibility, examines public transit and cycling infrastructure, identifies underserved pockets, and offers concrete recommendations for improving food equity and transportation access.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://drive.google.com/file/d/1gOGuVAa963Hq6NIvC5WqqLx9csi-Rvb7/view?usp=sharing" target="_blank">Full Report</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="data-viz">
+        <div class="project-top">
+          <a class="project-title" href="https://us-energy-akshar.netlify.app" target="_blank">US Energy Sources Dashboard</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Energy Policy</span>
+          <span class="tag">Interactive</span>
+        </div>
+        <p class="project-desc">An interactive, state-by-state dashboard exploring US energy mix trends and each state's stated energy transition goals. Built to let policymakers, journalists, and researchers quickly locate where a state stands — and where it says it's headed.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://us-energy-akshar.netlify.app" target="_blank">Dashboard</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="policy">
+        <div class="project-top">
+          <a class="project-title" href="https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing" target="_blank">Philanthropy & Responsibilism in the United States</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Policy</span>
+          <span class="tag">Survey Research</span>
+          <span class="tag">R</span>
+        </div>
+        <p class="project-desc">Funded through a pitch contest at Booth School of Business. We designed a 50-question survey completed by 180 Americans to study charitable giving patterns — what drives donations, preferences for formal vs. informal giving, and the anxieties donors carry. Analysis in R using Qualtrics data.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://docs.google.com/presentation/d/17FCXrRtANxt6Ul3v6z709nXVM-omLcPBC8mwi7XGsqE/edit?usp=sharing" target="_blank">Slide Deck</a>
+          <a class="project-link" href="https://github.com/aksharkatariya/donations-philanthropies-analysis" target="_blank">Code</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="policy">
+        <div class="project-top">
+          <a class="project-title" href="https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing" target="_blank">ESG Materiality Assessment — APA Corp.</a>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Policy</span>
+          <span class="tag">ESG</span>
+          <span class="tag">R</span>
+        </div>
+        <p class="project-desc">Qualitative and quantitative benchmarking of APA Corp., a hydrocarbon exploration company, against ESG peers. Supervised by John Oxtoby (Ariel Investments) and Neolle Liang (Builders Vision). Identified material ESG themes and used R to conduct comparative financial and non-financial analysis.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://docs.google.com/document/d/1LdWtBm02db7AclD5x235OAOnKViALAKLnluRYVaGuDM/edit?usp=sharing" target="_blank">Report</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="nlp">
+        <div class="project-top">
+          <a class="project-title" href="https://github.com/aksharkatariya/Partition-Project" target="_blank">Reading Beyond the Radcliffe Line</a>
+          <span class="project-year">2023</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">NLP</span>
+          <span class="tag">Sentiment Analysis</span>
+          <span class="tag">India</span>
+          <span class="tag">R</span>
+        </div>
+        <p class="project-desc">Sentiment analysis and Named Entity Recognition on five canonical books about the Partition of India, searching for textual evidence of syncretism — shared cultural memory across the divide. The goal was to move beyond close reading and let the data speak to questions historians have debated for decades.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/aksharkatariya/Partition-Project" target="_blank">GitHub</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="data-viz nlp">
+        <div class="project-top">
+          <a class="project-title" href="https://aksharkatariya.substack.com" target="_blank">Factorial Newsletter</a>
+          <span class="project-year">2023–</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Data Journalism</span>
+          <span class="tag">India</span>
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+        </div>
+        <p class="project-desc">A bi-weekly data literacy newsletter with 300+ subscribers, built to bring rigorous data storytelling to Indian readers. Published 20+ pieces on sports analytics, sentiment analysis, impact investing, and civic data — including a mural data analysis of Chicago and an NLP deep dive into Hamilton. Also runs a guest author program mentoring high school students in India on data storytelling.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://aksharkatariya.substack.com" target="_blank">Newsletter</a>
+          <a class="project-link" href="https://aksharkatariya.substack.com/p/artistry-of-the-windy-city" target="_blank">Chicago Murals</a>
+          <a class="project-link" href="https://aksharkatariya.substack.com/p/hamiltongpt-exploring-the-musical" target="_blank">Hamilton NLP</a>
+        </div>
+      </li>
+
+      <li class="project-item" data-tags="civic-tech">
+        <div class="project-top">
+          <a class="project-title" href="https://habitbybit.onrender.com" target="_blank">HabitByBit</a>
+          <span class="project-year">2023</span>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Civic Tech</span>
+          <span class="tag">Ruby on Rails</span>
+          <span class="tag">D3.js</span>
+        </div>
+        <p class="project-desc">An SMS-based habit tracker designed for users who don't want another app. Built with Ruby on Rails and D3.js — users self-report via text message, and the app visualizes progress over time. Designed for simplicity and customization with zero friction.</p>
+        <div class="project-links">
+          <a class="project-link" href="https://habitbybit.onrender.com" target="_blank">Website</a>
+          <a class="project-link" href="https://github.com/aksharkatariya/habit_by_bit" target="_blank">Code</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="rule-line"></div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-org">IDinsight</div>
+      <div class="exp-period">Jun – Aug 2024<br>Lusaka, Zambia</div>
+      <div class="exp-role">Consultant</div>
+      <p class="exp-desc">Analyzed education leadership interventions in South Africa and delivered recommendations to the Western Cape Education Board. Used MICE for missing data imputation and causal forests to assess program impact. Combined quantitative tools (World Bank Teach, D-WMS) with qualitative findings from focus group discussions.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-org">Harris School of Public Policy, UChicago</div>
+      <div class="exp-period">Jan 2023 – Present<br>Chicago, IL</div>
+      <div class="exp-role">Coding Tutor — R & STATA</div>
+      <p class="exp-desc">One-on-one tutorials for 500+ students across R and STATA. Designed interactive learning materials using Quizlet and simulations. Achieved a 90% return rate by making complex coding concepts genuinely intuitive.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-org">Department of Economics, Ashoka University</div>
+      <div class="exp-period">Aug 2022 – May 2023<br>New Delhi, India</div>
+      <div class="exp-role">Head Teaching Assistant</div>
+      <p class="exp-desc">Taught R programming using real-world datasets from Kaggle, DHS, and FRED. Redesigned the curriculum with flipped classroom models and integrated ShinyApps for interactive statistical learning — improving quiz scores by ~20%.</p>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header">
+      <h2>Education</h2>
+      <div class="rule-line"></div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">University of Chicago</div>
+      <div class="edu-period">May 2025</div>
+      <div class="edu-degree">Master of Public Policy · Certificate in Data Science · International House Fellow '25</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">Ashoka University</div>
+      <div class="edu-period">May 2023</div>
+      <div class="edu-degree">BA (Hons.) Economics, Cum Laude</div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-header">
+      <h2>Skills</h2>
+      <div class="rule-line"></div>
+    </div>
+    <div class="skills-row">
+      <span class="skill-tag">R</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">STATA</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">QGIS</span>
+      <span class="skill-tag">Ruby</span>
+      <span class="skill-tag">D3.js</span>
+      <span class="skill-tag">Altair</span>
+      <span class="skill-tag">ggplot2</span>
+      <span class="skill-tag">Shiny</span>
+      <span class="skill-tag">Causal Forests</span>
+      <span class="skill-tag">NLP</span>
+      <span class="skill-tag">Survey Design</span>
+      <span class="skill-tag">Program Evaluation</span>
+      <span class="skill-tag">ESG Analysis</span>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact">
+    <div class="footer-left">
+      <h3>Get in touch.</h3>
+      <div class="footer-links">
+        <a href="mailto:akshar@uchicago.edu">akshar@uchicago.edu</a>
+        <a href="https://www.linkedin.com/in/akshar-katariya" target="_blank">LinkedIn</a>
+        <a href="https://aksharkatariya.substack.com" target="_blank">Factorial Newsletter</a>
+        <a href="https://github.com/aksharkatariya" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      Chicago, IL<br>
+      aksharkatariya.github.io
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Filter logic
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      projectItems.forEach(item => {
+        if (filter === 'all') {
+          item.classList.remove('hidden');
+        } else {
+          const tags = item.dataset.tags || '';
+          item.classList.toggle('hidden', !tags.includes(filter));
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
