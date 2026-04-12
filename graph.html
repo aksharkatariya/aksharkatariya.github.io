@@ -75,8 +75,8 @@
       color: #7A7268;
     }
     .legend-dot {
-      width: 9px;
-      height: 9px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -439,9 +439,9 @@
       x1: x, y1: ext[id].min,
       x2: x, y2: ext[id].max,
       stroke: COLORS[id],
-      'stroke-width': 2,
+      'stroke-width': 4,
       'stroke-linecap': 'round',
-      opacity: 0.4,
+      opacity: 0.7,
     }));
   }
 
@@ -461,10 +461,10 @@
         d: pathD,
         fill: 'none',
         stroke: col,
-        'stroke-width': 1.5,
+        'stroke-width': 3,
         'stroke-dasharray': '4 3',
         'stroke-linecap': 'round',
-        opacity: 0.65,
+        opacity: 0.8,
       }));
 
       // Hollow endpoint circle on the merge branch
@@ -502,17 +502,16 @@
 
     svg.appendChild(g);
 
-    // ── TITLE LABEL (clickable SVG <a>) ─────────────────
-    const titleAnchor = svgEl('a');
-    titleAnchor.setAttribute('href', c.url);
-    titleAnchor.setAttribute('target', '_blank');
-    titleAnchor.setAttribute('rel', 'noopener');
-    titleAnchor.style.cursor = 'pointer';
-
+    // ── TITLE LABEL (clickable, opens popup not direct link) ─────────────────
+    const titleGroup = svgEl('g');
+    titleGroup.classList.add('node-group');
+    titleGroup.dataset.idx = i;
+    titleGroup.style.cursor = 'pointer';
+    
     const lines = wrapText(c.title, 30);
     const lineH = 15;
     const startTextY = cy - ((lines.length - 1) * lineH) / 2;
-
+    
     for (let li = 0; li < lines.length; li++) {
       const t = svgEl('text', {
         x: LABEL_X,
@@ -521,22 +520,19 @@
         'font-family': 'Cormorant Garamond, serif',
         'font-size': 15,
         'font-weight': 600,
-        'text-decoration': 'none',
       });
       t.textContent = lines[li];
-      t.style.transition = 'fill 0.15s';
-      titleAnchor.appendChild(t);
+      titleGroup.appendChild(t);
     }
-
-    // Hover: change title color
-    titleAnchor.addEventListener('mouseenter', () => {
-      titleAnchor.querySelectorAll('text').forEach(t => t.setAttribute('fill', '#B94A22'));
+    
+    titleGroup.addEventListener('mouseenter', () => {
+      titleGroup.querySelectorAll('text').forEach(t => t.setAttribute('fill', '#B94A22'));
     });
-    titleAnchor.addEventListener('mouseleave', () => {
-      titleAnchor.querySelectorAll('text').forEach(t => t.setAttribute('fill', '#1A1714'));
+    titleGroup.addEventListener('mouseleave', () => {
+      titleGroup.querySelectorAll('text').forEach(t => t.setAttribute('fill', '#1A1714'));
     });
-
-    svg.appendChild(titleAnchor);
+    
+    svg.appendChild(titleGroup);
 
     // Branch tag(s) below title
     const tagStr = [c.branch, ...c.merges].map(b => BRANCH_LABELS[b]).join(' · ');
